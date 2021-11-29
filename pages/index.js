@@ -9,10 +9,18 @@ export default function Home() {
         <title>JTB Construction</title>
         <meta name="description" content="JTB Construction | Pardon Our Dust" />
         <link rel="icon" href="/favicon.ico" />
-        <style>
-          @import
-          url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif&display=swap");
-        </style>
+        <link
+          rel="preload"
+          href="/fonts/Bebas_Neue/BebasNeue-regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Noto_Serif/NotoSerif-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <main className={styles.main}>
