@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className={styles.title}>Under Construction</h1>
 
         <p className={styles.description}>
-          We're making some updates to our site.
+          We&apos;re making some updates to our site.
         </p>
       </main>
 
