@@ -15,9 +15,10 @@ export default function Home() {
         <Image
           src="/banner.png"
           alt="JTB Construction Banner"
-          width={1000}
-          height={250}
-          className='banner'
+          width={400}
+          height={100}
+          className={styles.banner}
+          sx={{ mb: 30 }}
         />
         <h1 className={styles.title}>Under Construction</h1>
 
