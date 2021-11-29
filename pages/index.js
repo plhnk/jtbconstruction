@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif&display=swap');
+          url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif&display=swap");
         </style>
       </Head>
 
