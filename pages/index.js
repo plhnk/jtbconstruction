@@ -1,10 +1,28 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          scale: 0.8,
+          opacity: 0,
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 0.4,
+          },
+        },
+      }}
+      className={styles.container}
+    >
       <Head>
         <title>JTB Construction</title>
         <meta name="description" content="JTB Construction | Pardon Our Dust" />
@@ -42,6 +60,6 @@ export default function Home() {
       <footer className={styles.footer}>
         Copyright © {new Date().getFullYear()} JTB Construction.
       </footer>
-    </div>
+    </motion.div>
   );
 }
