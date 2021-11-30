@@ -1,8 +1,9 @@
 :root {
-  --primary: #ffcb48;
+  --primary: #FFCB48;
   --dark-1: #191200;
   --dark-3: #312300;
-  --dark-5: #7c7a74;
+  --dark-5: #7C7A74;
+  --dark-7: #E4E4E3;
   --text: var(--dark-5);
 }
 
@@ -24,6 +25,7 @@
 html,
 body {
   color: var(--text);
+  font-size: 16px;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -37,4 +39,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
 }
