@@ -1,10 +1,11 @@
 :root {
-  --primary: #FFCB48;
-  --dark-1: #191200;
-  --dark-3: #312300;
-  --dark-5: #7C7A74;
-  --dark-7: #E4E4E3;
-  --text: var(--dark-5);
+  --primary: #ffcb48;
+  --neutral-1: #191200;
+  --neutral-3: #312300;
+  --neutral-5: #7c7a74;
+  --neutral-7: #e4e4e3;
+  --neutral-9: #fcfbfa;
+  --text: var(--neutral-5);
 }
 
 @font-face {
@@ -24,6 +25,18 @@
 
 html,
 body {
+  animation: gradient 30s infinite linear;
+  background: var(--primary);
+  background-image: linear-gradient(
+    45deg,
+    var(--neutral-1) 25%,
+    var(--primary) 25%,
+    var(--primary) 50%,
+    var(--neutral-1) 50%,
+    var(--neutral-1) 75%,
+    var(--primary) 75%
+  );
+  background-size: 4rem 4rem;
   color: var(--text);
   font-size: 16px;
   padding: 0;
@@ -44,5 +57,14 @@ a {
 @media (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
   }
 }
