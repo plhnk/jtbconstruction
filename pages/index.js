@@ -10,11 +10,11 @@ export default function Home() {
       animate="visible"
       variants={{
         hidden: {
-          scale: 0.8,
+          y: 100,
           opacity: 0,
         },
         visible: {
-          scale: 1,
+          y: 16,
           opacity: 1,
           transition: {
             delay: 0.4,
@@ -41,7 +41,24 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.main}>
+      <motion.main
+        className={styles.main}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            y: 100,
+            opacity: 0,
+          },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.5,
+            },
+          },
+        }}
+      >
         <Image
           src="/banner.png"
           alt="JTB Construction Banner"
@@ -50,16 +67,68 @@ export default function Home() {
           className={styles.banner}
           sx={{ mb: 30 }}
         />
-        <h1 className={styles.title}>Under Construction</h1>
+        <motion.h1
+          className={styles.title}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              y: 100,
+              opacity: 0,
+            },
+            visible: {
+              y: 16,
+              opacity: 1,
+              transition: {
+                delay: 0.55,
+              },
+            },
+          }}
+        >
+          Under Construction
+        </motion.h1>
 
-        <p className={styles.description}>
+        <motion.p
+          className={styles.description}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              y: 100,
+              opacity: 0,
+            },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: 0.6,
+              },
+            },
+          }}
+        >
           We&apos;re making some updates to our site.
-        </p>
-      </main>
+        </motion.p>
+      </motion.main>
 
-      <footer className={styles.footer}>
+      <motion.footer
+        className={styles.footer}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            opacity: 0,
+          },
+          visible: {
+            opacity: 1,
+            transition: {
+              duration: .5,
+              delay: .6,
+            },
+          },
+        }}
+      >
         Copyright © {new Date().getFullYear()} JTB Construction.
-      </footer>
+      </motion.footer>
     </motion.div>
   );
 }
